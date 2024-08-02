@@ -1,4 +1,4 @@
-This is the official repo for FUSTT (Forecasting using Spatio-Temporal Transformer V1). 
+This is the official repo for FUSTT (Forecasting using Spatio-Temporal Transformer V1).
 
 ## Getting Started
 
@@ -7,16 +7,14 @@ This is the official repo for FUSTT (Forecasting using Spatio-Temporal Transform
 ```
 pip install -r requirements.txt
 ```
+
 2. I suggest install python 3.7/3.8 which supports the other versions of software used as well. Once installed try to implement the models using the script running them on bash/cmd.
 
-3. if using Linux, make the file executable by using chmod. 
-and then run the script by
-bash ./script/Data_Passage/script.sh (make necessary changes)
+3. if using Linux, make the file executable by using chmod.
+   and then run the script by
+   bash .src/scripts/DiscoveryPassage_Script/FUSST.sh (make necessary changes)
 
 TO RUN FUSTT, we use FUSST as the name for the code file (we called it fusst first, but then never changed the name in code file name again)
-
-
-
 
 4. You can visualize the predictions of FUSTT through the notebook 'visualization.ipynb'.
 
@@ -30,7 +28,7 @@ If you find our repo useful, please cite our paper:
 
 ## Acknowledgement
 
-We appreciate the dataset provided by 
+We appreciate the dataset provided by
 https://www.oceannetworks.ca/
 
-We appreciate guidance and product sponsorship by NRC. 
+We appreciate guidance and product sponsorship by NRC.
