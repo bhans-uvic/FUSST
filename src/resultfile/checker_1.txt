@@ -1,8 +1,8 @@
-bash ./scripts/DiscoveryPassage_Script/autoformer.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/autoformer.sh
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Autoformer', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Autoformer', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33539
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -185,7 +185,7 @@ Epoch: 7, Steps: 1048 | Train Loss: 0.1763201 Vali Loss: 0.3753121 Test Loss: 1.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 1.5625e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9542
 test shape: (9542, 1, 96, 8) (9542, 1, 96, 8)

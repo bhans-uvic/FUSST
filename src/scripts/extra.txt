@@ -2,8 +2,8 @@ python3 -u run.py \
   --task_name long_term_forecast \
   --is_training 1 \
   --root_path ./dataset/ \
-  --data_path DiscoveryPassage_merged.csv \
-  --model_id DiscoveryPassage_720_360_962 \
+  --data_path DiscoveryPassage_and_others_merged.csv \
+  --model_id DiscoveryPassage_and_others_720_360_962 \
   --model $model_name \
   --data custom \
   --features M \
@@ -24,8 +24,8 @@ python3 -u run.py \
   --task_name long_term_forecast \
   --is_training 1 \
   --root_path ./dataset/ \
-  --data_path DiscoveryPassage_merged.csv \
-  --model_id DiscoveryPassage_720_360_963 \
+  --data_path DiscoveryPassage_and_others_merged.csv \
+  --model_id DiscoveryPassage_and_others_720_360_963 \
   --model $model_name \
   --data custom \
   --features M \
@@ -46,8 +46,8 @@ python3 -u run.py \
   --task_name long_term_forecast \
   --is_training 1 \
   --root_path ./dataset/ \
-  --data_path DiscoveryPassage_merged.csv \
-  --model_id DiscoveryPassage_720_360_964 \
+  --data_path DiscoveryPassage_and_others_merged.csv \
+  --model_id DiscoveryPassage_and_others_720_360_964 \
   --model $model_name \
   --data custom \
   --features M \

@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 3. if using Linux, make the file executable by using chmod.
    and then run the script by
-   bash .src/scripts/DiscoveryPassage_Script/FUSST.sh (make necessary changes)
+   bash .src/scripts/DiscoveryPassage_and_others_Script/FUSST.sh (make necessary changes)
 
 TO RUN FUSTT, we use FUSST as the name for the code file (we called it fusst first, but then never changed the name in code file name again)
 

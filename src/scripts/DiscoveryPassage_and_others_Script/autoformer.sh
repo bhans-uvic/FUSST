@@ -1,12 +1,12 @@
-model_name=FUSST
+export CUDA_VISIBLE_DEVICES=0
+model_name=Autoformer
 
 python3 -u run.py \
-  --activation 'gelu'\
   --task_name long_term_forecast \
   --is_training 1 \
   --root_path ./dataset/ \
-  --data_path DiscoveryPassage_merged.csv \
-  --model_id DiscoveryPassage_720_360_96 \
+  --data_path DiscoveryPassage_and_others_merged.csv \
+  --model_id DiscoveryPassage_and_others_720_360_96 \
   --model $model_name \
   --data custom \
   --features M \
@@ -19,9 +19,7 @@ python3 -u run.py \
   --enc_in 8 \
   --dec_in 8 \
   --c_out 8 \
+  --lradj 'type1' \
   --des 'Exp' \
-  --learning_rate 0.0001 \
-  --lradj 'type2' \
-  --w_lin 0.01 \
   --itr 1 \
   --target "Chlorophyll (ug/l)"

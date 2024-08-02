@@ -2,15 +2,15 @@
  
  
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX___________________CROSSFORMER_____________________XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-$ bash ./scripts/DiscoveryPassage_Script/crossformer.sh
+$ bash ./scripts/DiscoveryPassage_and_others_Script/crossformer.sh
 MODEL IMPLEMENTED= Crossformer
 PREDICTION LENGTH= 720
 SEQUENCE LENGTH= 720
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=720, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=720, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_and_others_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=720, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=720, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl720_ll48_pl720_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl720_ll48_pl720_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 32291
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -168,7 +168,7 @@ Epoch: 6, Steps: 1009 | Train Loss: 0.2669585 Vali Loss: 0.6129010 Test Loss: 3.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 3.125e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl720_ll48_pl720_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl720_ll48_pl720_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 8918
 test shape: (8918, 1, 720, 8) (8918, 1, 720, 8)
@@ -178,16 +178,16 @@ mse:3.5268545150756836, mae:0.972080647945404
 
 
 
-bash ./scripts/DiscoveryPassage_Script/crossformer.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/crossformer.sh
 /usr/local/bin/python3
 MODEL IMPLEMENTED= Crossformer
 PREDICTION LENGTH= 360
 SEQUENCE LENGTH= 360
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=360, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=360, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_and_others_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=360, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=360, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl360_ll48_pl360_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl360_ll48_pl360_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33011
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -370,7 +370,7 @@ Epoch: 7, Steps: 1031 | Train Loss: 0.2586144 Vali Loss: 0.5047126 Test Loss: 3.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 1.5625e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl360_ll48_pl360_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl360_ll48_pl360_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9278
 test shape: (9278, 1, 360, 8) (9278, 1, 360, 8)
@@ -381,15 +381,15 @@ mse:3.513012647628784, mae:0.9436008930206299
 
 
 
-bash ./scripts/DiscoveryPassage_Script/crossformer.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/crossformer.sh
 MODEL IMPLEMENTED= Crossformer
 PREDICTION LENGTH= 336
 SEQUENCE LENGTH= 336
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_and_others_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl336_ll48_pl336_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl336_ll48_pl336_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33059
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -547,7 +547,7 @@ Epoch: 6, Steps: 1033 | Train Loss: 0.2648060 Vali Loss: 0.4636705 Test Loss: 3.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 3.125e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl336_ll48_pl336_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl336_ll48_pl336_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9302
 test shape: (9302, 1, 336, 8) (9302, 1, 336, 8)
@@ -556,15 +556,15 @@ mse:3.115400791168213, mae:0.8903450965881348
 
 
 
-bash ./scripts/DiscoveryPassage_Script/crossformer.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/crossformer.sh
 MODEL IMPLEMENTED= Crossformer
 PREDICTION LENGTH= 192
 SEQUENCE LENGTH= 192
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_and_others_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl192_ll48_pl192_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl192_ll48_pl192_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33347
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -722,7 +722,7 @@ Epoch: 6, Steps: 1042 | Train Loss: 0.2655342 Vali Loss: 0.4690933 Test Loss: 2.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 3.125e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl192_ll48_pl192_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl192_ll48_pl192_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9446
 test shape: (9446, 1, 192, 8) (9446, 1, 192, 8)
@@ -734,11 +734,11 @@ PREDICTION LENGTH= 96
 SEQUENCE LENGTH= 96
 LEARNING RATE ADJUSTMENT= type2 
  
-bash ./scripts/DiscoveryPassage_Script/crossformer.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/crossformer.sh
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=16, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type2', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=16, c_out=8, checkpoints='./checkpoints/', d_ff=512, d_layers=1, d_model=256, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type2', mask_rate=0.25, model='Crossformer', model_id='DiscoveryPassage_and_others_720_360_96cf', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl96_ll48_pl96_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl96_ll48_pl96_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33539
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -1102,7 +1102,7 @@ Epoch: 8, Steps: 2096 | Train Loss: 0.2346701 Vali Loss: 0.2316883 Test Loss: 2.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 1e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96cf_Crossformer_custom_ftM_sl96_ll48_pl96_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96cf_Crossformer_custom_ftM_sl96_ll48_pl96_dm256_nh8_el2_dl1_df512_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9542
 test shape: (9542, 1, 96, 8) (9542, 1, 96, 8)
@@ -1134,14 +1134,14 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________________________________XXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX___________________FEDFORMER_____________________XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
- bash ./scripts/DiscoveryPassage_Script/fedformer.sh
+ bash ./scripts/DiscoveryPassage_and_others_Script/fedformer.sh
 /usr/local/bin/python3
 MODEL IMPLEMENTED= FEDformer
 PREDICTION LENGTH= 360
 SEQUENCE LENGTH= 360
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='type1', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FEDformer', model_id='DiscoveryPassage_720_360_96_ff', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=360, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=360, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
+Namespace(activation='type1', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FEDformer', model_id='DiscoveryPassage_and_others_720_360_96_ff', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=360, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=360, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
 Use CPU
 fourier enhanced block used!
 modes=32, index=[0, 8, 13, 14, 22, 24, 28, 43, 56, 58, 59, 66, 72, 76, 77, 79, 80, 83, 86, 96, 99, 112, 118, 126, 136, 137, 151, 155, 158, 173, 176, 179]
@@ -1150,7 +1150,7 @@ modes=32, index=[4, 12, 13, 34, 35, 46, 76, 87, 89, 92, 104, 106, 107, 111, 118,
  fourier enhanced cross attention used!
 modes_q=32, index_q=[9, 16, 18, 20, 28, 32, 40, 46, 73, 76, 79, 80, 81, 84, 85, 95, 105, 121, 123, 152, 172, 173, 174, 187, 201, 206, 207, 216, 222, 249, 252, 264]
 modes_kv=32, index_kv=[6, 19, 20, 27, 35, 38, 54, 59, 60, 61, 62, 65, 67, 70, 71, 72, 74, 82, 83, 84, 85, 86, 102, 110, 111, 121, 122, 140, 146, 152, 170, 173]
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_ff_FEDformer_custom_ftM_sl360_ll48_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_ff_FEDformer_custom_ftM_sl360_ll48_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33011
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -1458,7 +1458,7 @@ Epoch: 12, Steps: 1031 | Train Loss: 0.4566467 Vali Loss: 0.5672722 Test Loss: 2
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 4.8828125e-08
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_ff_FEDformer_custom_ftM_sl360_ll48_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_ff_FEDformer_custom_ftM_sl360_ll48_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9278
 test shape: (9278, 1, 360, 8) (9278, 1, 360, 8)
@@ -1469,14 +1469,14 @@ mse:2.5801498889923096, mae:0.790854275226593
 
 
 
-$ bash ./scripts/DiscoveryPassage_Script/fedformer.sh
+$ bash ./scripts/DiscoveryPassage_and_others_Script/fedformer.sh
 /usr/local/bin/python3
 MODEL IMPLEMENTED= FEDformer
 PREDICTION LENGTH= 336
 SEQUENCE LENGTH= 336
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='type1', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FEDformer', model_id='DiscoveryPassage_720_360_96_ff', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
+Namespace(activation='type1', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FEDformer', model_id='DiscoveryPassage_and_others_720_360_96_ff', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
 Use CPU
 fourier enhanced block used!
 modes=32, index=[0, 2, 8, 13, 14, 22, 23, 28, 34, 35, 36, 42, 45, 59, 65, 66, 68, 72, 73, 86, 95, 96, 97, 104, 125, 134, 136, 142, 143, 148, 161, 162]
@@ -1485,7 +1485,7 @@ modes=32, index=[0, 13, 35, 37, 41, 46, 87, 103, 106, 108, 111, 118, 121, 124, 1
  fourier enhanced cross attention used!
 modes_q=32, index_q=[3, 17, 20, 21, 28, 59, 70, 73, 81, 84, 85, 90, 93, 105, 111, 117, 123, 125, 128, 153, 157, 186, 191, 197, 201, 204, 207, 208, 216, 220, 236, 243]
 modes_kv=32, index_kv=[8, 9, 16, 18, 24, 28, 30, 37, 52, 61, 62, 74, 78, 85, 92, 93, 99, 108, 114, 118, 123, 126, 129, 132, 140, 146, 149, 152, 154, 156, 159, 165]
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_ff_FEDformer_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_ff_FEDformer_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33059
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -1818,7 +1818,7 @@ Epoch: 13, Steps: 1033 | Train Loss: 0.4600946 Vali Loss: 0.5641848 Test Loss: 2
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 2.44140625e-08
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_ff_FEDformer_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_ff_FEDformer_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9302
 test shape: (9302, 1, 336, 8) (9302, 1, 336, 8)
@@ -1828,14 +1828,14 @@ mse:2.5151054859161377, mae:0.7779150605201721
 
 
 
-doug@V2K-Chinmay:~/Desktop/Experiments/src/fusst$ bash ./scripts/DiscoveryPassage_Script/fedformer.sh
+doug@V2K-Chinmay:~/Desktop/Experiments/src/fusst$ bash ./scripts/DiscoveryPassage_and_others_Script/fedformer.sh
 /usr/local/bin/python3
 MODEL IMPLEMENTED= FEDformer
 PREDICTION LENGTH= 192
 SEQUENCE LENGTH= 192
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='type1', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FEDformer', model_id='DiscoveryPassage_720_360_96_ff', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
+Namespace(activation='type1', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FEDformer', model_id='DiscoveryPassage_and_others_720_360_96_ff', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
 Use CPU
 fourier enhanced block used!
 modes=32, index=[2, 3, 4, 6, 8, 13, 22, 23, 28, 30, 32, 34, 35, 37, 43, 53, 55, 56, 58, 59, 64, 69, 71, 74, 75, 78, 79, 81, 84, 87, 89, 93]
@@ -1844,7 +1844,7 @@ modes=32, index=[0, 1, 5, 8, 9, 13, 15, 22, 28, 37, 48, 56, 60, 61, 62, 63, 82, 
  fourier enhanced cross attention used!
 modes_q=32, index_q=[0, 4, 10, 11, 15, 24, 29, 34, 35, 37, 43, 45, 46, 58, 66, 71, 77, 83, 85, 92, 96, 103, 104, 106, 107, 112, 113, 117, 119, 129, 139, 142]
 modes_kv=32, index_kv=[2, 3, 16, 17, 20, 21, 24, 26, 27, 30, 31, 34, 38, 43, 45, 46, 51, 58, 62, 64, 65, 68, 69, 72, 75, 78, 81, 83, 84, 85, 86, 87]
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_ff_FEDformer_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_ff_FEDformer_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33347
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -2102,7 +2102,7 @@ Epoch: 10, Steps: 1042 | Train Loss: 0.4349594 Vali Loss: 0.4923207 Test Loss: 2
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 1.953125e-07
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_ff_FEDformer_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_ff_FEDformer_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9446
 test shape: (9446, 1, 192, 8) (9446, 1, 192, 8)
@@ -2121,9 +2121,9 @@ LEARNING RATE ADJUSTMENT= type1
 
 
 
-bash ./scripts/DiscoveryPassage_Script/fedformer.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/fedformer.sh
 Args in experiment:
-Namespace(activation='type1', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FEDformer', model_id='DiscoveryPassage_720_360_96_ff', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
+Namespace(activation='type1', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FEDformer', model_id='DiscoveryPassage_and_others_720_360_96_ff', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
 Use CPU
 fourier enhanced block used!
 modes=32, index=[2, 3, 4, 5, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 23, 25, 26, 28, 31, 32, 34, 35, 37, 38, 39, 40, 42, 43, 44, 46]
@@ -2132,7 +2132,7 @@ modes=32, index=[0, 1, 2, 4, 5, 8, 10, 12, 13, 14, 16, 21, 22, 24, 26, 28, 29, 3
  fourier enhanced cross attention used!
 modes_q=32, index_q=[0, 8, 13, 14, 16, 17, 18, 19, 21, 22, 24, 28, 29, 33, 37, 40, 42, 43, 44, 47, 48, 50, 51, 53, 55, 56, 58, 60, 62, 63, 68, 69]
 modes_kv=32, index_kv=[0, 1, 2, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 20, 22, 24, 28, 30, 31, 32, 34, 35, 36, 37, 38, 39, 44, 45, 46, 47]
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_ff_FEDformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_ff_FEDformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33539
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -2415,7 +2415,7 @@ Epoch: 11, Steps: 1048 | Train Loss: 0.3990939 Vali Loss: 0.3913208 Test Loss: 2
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 9.765625e-08
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_ff_FEDformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_ff_FEDformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9542
 test shape: (9542, 1, 96, 8) (9542, 1, 96, 8)
@@ -2432,11 +2432,11 @@ PREDICTION LENGTH= 96
 SEQUENCE LENGTH= 96
 LEARNING RATE ADJUSTMENT= type1
 
-bash ./scripts/DiscoveryPassage_Script/FUSST.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/FUSST.sh
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33539
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -2719,7 +2719,7 @@ Epoch: 11, Steps: 1048 | Train Loss: 0.3062381 Vali Loss: 0.2260765 Test Loss: 1
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 9.765625e-08
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9542
 test shape: (9542, 1, 96, 8) (9542, 1, 96, 8)
@@ -2732,15 +2732,15 @@ mse:1.5867785215377808, mae:0.45299604535102844
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX___________________FUSST_____________________XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-bash ./scripts/DiscoveryPassage_Script/FUSST.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/FUSST.sh
 MODEL IMPLEMENTED= FUSST
 PREDICTION LENGTH= 192
 SEQUENCE LENGTH= 192
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33347
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -2923,7 +2923,7 @@ Epoch: 7, Steps: 1042 | Train Loss: 0.3232099 Vali Loss: 0.3233053 Test Loss: 1.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 1.5625e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9446
 test shape: (9446, 1, 192, 8) (9446, 1, 192, 8)
@@ -2932,16 +2932,16 @@ mse:1.7897837162017822, mae:0.5224279761314392
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX___________________FUSST_____________________XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
-bash ./scripts/DiscoveryPassage_Script/FUSST.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/FUSST.sh
 /usr/local/bin/python3
 MODEL IMPLEMENTED= FUSST
 PREDICTION LENGTH= 360
 SEQUENCE LENGTH= 360
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=24, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=360, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=360, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=24, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=360, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=360, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl360_ll24_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl360_ll24_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33011
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -3099,7 +3099,7 @@ Epoch: 6, Steps: 1031 | Train Loss: 0.3157951 Vali Loss: 0.4394670 Test Loss: 2.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 3.125e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl360_ll24_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl360_ll24_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9278
 test shape: (9278, 1, 360, 8) (9278, 1, 360, 8)
@@ -3110,15 +3110,15 @@ mse:2.1265225410461426, mae:0.6026824116706848
 
 
 
-bash ./scripts/DiscoveryPassage_Script/FUSST.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/FUSST.sh
 MODEL IMPLEMENTED= FUSST
 PREDICTION LENGTH= 336
 SEQUENCE LENGTH= 336
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33059
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -3276,7 +3276,7 @@ Epoch: 6, Steps: 1033 | Train Loss: 0.3186055 Vali Loss: 0.4160234 Test Loss: 2.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 3.125e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9302
 test shape: (9302, 1, 336, 8) (9302, 1, 336, 8)
@@ -3287,15 +3287,15 @@ mse:2.0654447078704834, mae:0.5887762904167175
 
 
 
-bash ./scripts/DiscoveryPassage_Script/FUSST.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/FUSST.sh
 MODEL IMPLEMENTED= FUSST
 PREDICTION LENGTH= 720
 SEQUENCE LENGTH= 720
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=720, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=720, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=720, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=720, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 32291
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -3578,7 +3578,7 @@ Epoch: 11, Steps: 1009 | Train Loss: 0.2953287 Vali Loss: 0.7374054 Test Loss: 3
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 9.765625e-08
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 8918
 test shape: (8918, 1, 720, 8) (8918, 1, 720, 8)
@@ -3586,16 +3586,16 @@ test shape: (8918, 720, 8) (8918, 720, 8)
 mse:3.3482394218444824, mae:0.832334578037262
 
 
-doug@V2K-Chinmay:~/Desktop/Experiments/src/fusst$ bash ./scripts/DiscoveryPassage_Script/FUSST.sh
+doug@V2K-Chinmay:~/Desktop/Experiments/src/fusst$ bash ./scripts/DiscoveryPassage_and_others_Script/FUSST.sh
 /usr/local/bin/python3
 MODEL IMPLEMENTED= FUSST
 PREDICTION LENGTH= 1440
 SEQUENCE LENGTH= 1440
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=1440, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=1440, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=1440, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=1440, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl1440_ll48_pl1440_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl1440_ll48_pl1440_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 30851
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -3764,7 +3764,7 @@ Epoch: 7, Steps: 964 | Train Loss: 0.2840858 Vali Loss: 2.2474165 Test Loss: 4.4
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 1.5625e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl1440_ll48_pl1440_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl1440_ll48_pl1440_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 8198
 test shape: (8198, 1, 1440, 8) (8198, 1, 1440, 8)
@@ -3779,11 +3779,11 @@ MODEL IMPLEMENTED= FUSST
 PREDICTION LENGTH= 24
 SEQUENCE LENGTH= 192
 LEARNING RATE ADJUSTMENT= type1
-bash ./scripts/DiscoveryPassage_Script/FUSST.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/FUSST.sh
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=24, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='FUSST', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=24, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl192_ll48_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl192_ll48_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33515
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -4066,7 +4066,7 @@ Epoch: 11, Steps: 1047 | Train Loss: 0.2180773 Vali Loss: 0.1409722 Test Loss: 1
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 9.765625e-08
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_FUSST_custom_ftM_sl192_ll48_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_FUSST_custom_ftM_sl192_ll48_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9614
 test shape: (9614, 1, 24, 8) (9614, 1, 24, 8)
@@ -4090,16 +4090,16 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX________________autoformer
 
 
 
-doug@V2K-Chinmay:~/Desktop/Experiments/src/fusst$ bash ./scripts/DiscoveryPassage_Script/autoformer.sh
+doug@V2K-Chinmay:~/Desktop/Experiments/src/fusst$ bash ./scripts/DiscoveryPassage_and_others_Script/autoformer.sh
 /usr/local/bin/python3
 MODEL IMPLEMENTED= Autoformer
 PREDICTION LENGTH= 336
 SEQUENCE LENGTH= 336
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Autoformer', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Autoformer', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_Autoformer_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_Autoformer_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33059
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -4282,7 +4282,7 @@ Epoch: 7, Steps: 1033 | Train Loss: 0.1706695 Vali Loss: 0.6550254 Test Loss: 2.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 1.5625e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_Autoformer_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_Autoformer_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9302
 test shape: (9302, 1, 336, 8) (9302, 1, 336, 8)
@@ -4293,16 +4293,16 @@ mse:2.4205241203308105, mae:0.7627061605453491
 
 
 
-doug@V2K-Chinmay:~/Desktop/Experiments/src/fusst$ bash ./scripts/DiscoveryPassage_Script/autoformer.sh
+doug@V2K-Chinmay:~/Desktop/Experiments/src/fusst$ bash ./scripts/DiscoveryPassage_and_others_Script/autoformer.sh
 /usr/local/bin/python3
 MODEL IMPLEMENTED= Autoformer
 PREDICTION LENGTH= 192
 SEQUENCE LENGTH= 192
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Autoformer', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Autoformer', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_Autoformer_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_Autoformer_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33347
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -4460,7 +4460,7 @@ Epoch: 6, Steps: 1042 | Train Loss: 0.1799643 Vali Loss: 0.5009984 Test Loss: 2.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 3.125e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_Autoformer_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_Autoformer_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9446
 test shape: (9446, 1, 192, 8) (9446, 1, 192, 8)
@@ -4476,11 +4476,11 @@ PREDICTION LENGTH= 96
 SEQUENCE LENGTH= 96
 LEARNING RATE ADJUSTMENT= type1
 
-bash ./scripts/DiscoveryPassage_Script/autoformer.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/autoformer.sh
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Autoformer', model_id='DiscoveryPassage_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='Autoformer', model_id='DiscoveryPassage_and_others_720_360_96', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=1.0)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33539
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -4663,7 +4663,7 @@ Epoch: 7, Steps: 1048 | Train Loss: 0.1763201 Vali Loss: 0.3753121 Test Loss: 1.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 1.5625e-06
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_Autoformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9542
 test shape: (9542, 1, 96, 8) (9542, 1, 96, 8)
@@ -4684,15 +4684,15 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX__________________________
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_____________DLINEAR_____________________XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_____________DLINEAR_____________________XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
- bash ./scripts/DiscoveryPassage_Script/DLinear.sh
+ bash ./scripts/DiscoveryPassage_and_others_Script/DLinear.sh
 MODEL IMPLEMENTED= DLinear
 PREDICTION LENGTH= 1440
 SEQUENCE LENGTH= 1440
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=1440, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=1440, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_and_others_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=1440, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=1440, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl1440_ll48_pl1440_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl1440_ll48_pl1440_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 30851
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -5045,7 +5045,7 @@ Epoch: 15, Steps: 964 | Train Loss: 0.5170804 Vali Loss: 0.8114894 Test Loss: 4.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 6.103515625e-09
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl1440_ll48_pl1440_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl1440_ll48_pl1440_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 8198
 test shape: (8198, 1, 1440, 8) (8198, 1, 1440, 8)
@@ -5058,15 +5058,15 @@ mse:4.24737548828125, mae:1.099176287651062
 
 
 
-bash ./scripts/DiscoveryPassage_Script/DLinear.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/DLinear.sh
 MODEL IMPLEMENTED= DLinear
 PREDICTION LENGTH= 720
 SEQUENCE LENGTH= 720
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=720, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=720, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_and_others_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=720, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=720, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 32291
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -5274,7 +5274,7 @@ Epoch: 8, Steps: 1009 | Train Loss: 0.4174800 Vali Loss: 0.5677399 Test Loss: 3.
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 7.8125e-07
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl720_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 8918
 test shape: (8918, 1, 720, 8) (8918, 1, 720, 8)
@@ -5311,9 +5311,9 @@ PREDICTION LENGTH= 360
 SEQUENCE LENGTH= 360
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=360, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=360, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_and_others_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=360, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=360, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl360_ll48_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl360_ll48_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33011
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -5721,7 +5721,7 @@ Epoch: 16, Steps: 1031 | Train Loss: 0.3814913 Vali Loss: 0.4082270 Test Loss: 2
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 3.0517578125e-09
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl360_ll48_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl360_ll48_pl360_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9278
 test shape: (9278, 1, 360, 8) (9278, 1, 360, 8)
@@ -5737,15 +5737,15 @@ mse:2.189939498901367, mae:0.6377171277999878
 
 
 
-bash ./scripts/DiscoveryPassage_Script/DLinear.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/DLinear.sh
 MODEL IMPLEMENTED= DLinear
 PREDICTION LENGTH= 336
 SEQUENCE LENGTH= 336
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_and_others_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=336, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=336, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33059
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -6252,7 +6252,7 @@ Epoch: 20 cost time: 8.329456567764282
 Epoch: 20, Steps: 1033 | Train Loss: 0.3784156 Vali Loss: 0.3964213 Test Loss: 2.1457331
 EarlyStopping counter: 3 out of 5
 Updating learning rate to 1.9073486328125e-10
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9302
 test shape: (9302, 1, 336, 8) (9302, 1, 336, 8)
@@ -6260,15 +6260,15 @@ test shape: (9302, 336, 8) (9302, 336, 8)
 mse:2.145732879638672, mae:0.627136766910553
 
 
-bash ./scripts/DiscoveryPassage_Script/DLinear.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/DLinear.sh
 MODEL IMPLEMENTED= DLinear
 PREDICTION LENGTH= 192
 SEQUENCE LENGTH= 192
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_and_others_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=192, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=192, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33347
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -6601,21 +6601,21 @@ Epoch: 13, Steps: 1042 | Train Loss: 0.3650082 Vali Loss: 0.3376935 Test Loss: 1
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 2.44140625e-08
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl192_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9446
 test shape: (9446, 1, 192, 8) (9446, 1, 192, 8)
 test shape: (9446, 192, 8) (9446, 192, 8)
 mse:1.9135582447052002, mae:0.5749268531799316
-bash ./scripts/DiscoveryPassage_Script/DLinear.sh
+bash ./scripts/DiscoveryPassage_and_others_Script/DLinear.sh
 MODEL IMPLEMENTED= DLinear
 PREDICTION LENGTH= 96
 SEQUENCE LENGTH= 96
 LEARNING RATE ADJUSTMENT= type1
 Args in experiment:
-Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
+Namespace(activation='gelu', anomaly_ratio=0.25, batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='DiscoveryPassage_and_others_merged.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='MSE', lradj='type1', mask_rate=0.25, model='DLinear', model_id='DiscoveryPassage_and_others_720_360_96_tn', moving_avg=25, n_heads=8, num_kernels=6, num_workers=10, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=5, pred_len=96, root_path='./dataset/', seasonal_patterns='Monthly', seq_len=96, target='Chlorophyll (ug/l)', task_name='long_term_forecast', top_k=5, train_epochs=20, use_amp=False, use_gpu=False, use_multi_gpu=False, w_lin=0.01)
 Use CPU
->>>>>>>start training : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>start training : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 train 33539
 Chlorophyll (ug/l) Chlorophyll (ug/l)
@@ -6923,7 +6923,7 @@ Epoch: 12, Steps: 1048 | Train Loss: 0.3457391 Vali Loss: 0.2675869 Test Loss: 1
 EarlyStopping counter: 5 out of 5
 Updating learning rate to 4.8828125e-08
 Early stopping
->>>>>>>testing : long_term_forecast_DiscoveryPassage_720_360_96_tn_DLinear_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>testing : long_term_forecast_DiscoveryPassage_and_others_720_360_96_tn_DLinear_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Chlorophyll (ug/l) Chlorophyll (ug/l)
 test 9542
 test shape: (9542, 1, 96, 8) (9542, 1, 96, 8)
